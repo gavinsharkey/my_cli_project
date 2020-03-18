@@ -1,0 +1,1 @@
+doc = Nokogiri::HTML(open('https://www.worldometers.info/coronavirus/'))
