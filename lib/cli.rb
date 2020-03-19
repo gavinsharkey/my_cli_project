@@ -19,7 +19,7 @@ class CLI
     puts "4. Stats per Country"
     puts "5. Exit"
 
-    print "\nWhat would you like to see? "
+    print "\nWhat would you like to do? "
     input = gets.strip.to_i
     if input.between?(1, 5)
       if input == 5
@@ -32,7 +32,7 @@ class CLI
       self.list_options
     end
 
-    print "\nWould you like to view something else?(Y/N) "
+    print "\nWould you like to check something else?(Y/N) "
     input = gets.strip.downcase
     input == 'y' ? self.list_options : nil
   end
