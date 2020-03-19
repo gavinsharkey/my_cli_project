@@ -11,7 +11,7 @@ class Scraper
     active = self.get_active
     closed = self.get_closed
 
-    virus = Virus.new('totals', totals, active, closed)
+    virus = Virus.create('World', totals, active, closed)
   end
 
   def self.get_virus_per_country
@@ -32,8 +32,8 @@ class Scraper
     totals = @@doc.css('div.maincounter-number')
     {
       total: totals[0].text.strip,
-      deaths: totals[1].text.strip,
-      recovered: totals[2].text.strip,
+      total_deaths: totals[1].text.strip,
+      total_recovered: totals[2].text.strip,
     }
   end
 
@@ -41,9 +41,9 @@ class Scraper
     active = @@doc.css('div.panel_front')[0]
 
     {
-      total: active.css('div.number-table-main').text.strip,
-      mild: active.css('span.number-table')[0].text.strip,
-      critical: active.css('span.number-table')[1].text.strip
+      active: active.css('div.number-table-main').text.strip,
+      active_mild: active.css('span.number-table')[0].text.strip,
+      active_severe: active.css('span.number-table')[1].text.strip
     }
   end
 
@@ -51,9 +51,9 @@ class Scraper
     closed = @@doc.css('div.panel_front')[1]
 
     {
-      total: closed.css('div.number-table-main').text.strip,
-      recovered: closed.css('span.number-table')[0].text.strip,
-      deaths: closed.css('span.number-table')[1].text.strip
+      closed: closed.css('div.number-table-main').text.strip,
+      closed_recovered: closed.css('span.number-table')[0].text.strip,
+      closed_deaths: closed.css('span.number-table')[1].text.strip
     }
   end
 end

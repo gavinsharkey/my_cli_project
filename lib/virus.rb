@@ -1,5 +1,5 @@
 class Virus
-  attr_accessor :name, :totals, :active, :closed
+  attr_accessor :name, :total, :total_deaths, :total_recovered, :active, :active_mild, :active_severe, :closed, :closed_deaths, :closed_recovered
 
   @@all = []
 
@@ -11,15 +11,28 @@ class Virus
     @@all << self
   end
 
-  def initialize(name, totals, active, closed)
+  def initialize(name)
     self.name = name
-    self.totals = totals
-    self.active = active
-    self.closed = closed
-
     self.save
   end
 
+  def self.create(name, totals, actives, closed)
+    virus = Virus.new(name)
+    
+    totals.each do |key, value|
+      virus.send("#{key}=", value)
+    end
+
+    actives.each do |key, value|
+      virus.send("#{key}=", value)
+    end
+
+    closed.each do |key, value|
+      virus.send("#{key}=", value)
+    end
+
+    virus
+  end
   def countries
     Country.all
   end
