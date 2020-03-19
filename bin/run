@@ -2,5 +2,5 @@
 
 require_relative "../config/env"
 
-binding.pry
+CLI.new.call
 
