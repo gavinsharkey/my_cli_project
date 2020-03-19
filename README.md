@@ -2,6 +2,8 @@
 
 Hello! This is a simple CLI gem for displaying up-to-date statistics about the Corona Virus (COVID-19).
 
+After you fork it, just run '''ruby bin/corona_virus_cli'''.
+
 
 ## Installation
 
