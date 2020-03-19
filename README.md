@@ -1,6 +1,6 @@
 # Corona Virus Cli
 
-Hello! This is a simple CLI gem for displaying up-to-date statistics about the Corona Virus(COVID-19).
+Hello! This is a simple CLI gem for displaying up-to-date statistics about the Corona Virus (COVID-19).
 
 
 ## Installation
