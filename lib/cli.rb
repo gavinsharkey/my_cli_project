@@ -28,11 +28,11 @@ class CLI
         self.option(input)
       end
     else
-      puts "Invalid input"
+      puts "\n___Invalid Input___"
       self.list_options
     end
 
-    puts "\nWould you like to view something else?(Y/N)"
+    print "\nWould you like to view something else?(Y/N) "
     input = gets.strip.downcase
     input == 'y' ? self.list_options : nil
   end
@@ -78,7 +78,7 @@ class CLI
 
   def display_country
     self.list_countries
-    puts "\nWhich country would you like to view?"
+    print "\nWhich country would you like to view? "
     input = gets.strip.to_i
 
     if input.between?(1, self.virus.countries.length)
@@ -92,11 +92,11 @@ class CLI
       puts "  Active Cases: #{country.active}"
       puts '--------------------------------'     
 
-      puts "\nWould you like to view another country?(Y/N)"
+      print "\nWould you like to view another country?(Y/N) "
       repeat = gets.strip.downcase
       self.display_country if repeat == 'y'
     else
-      puts "Invalid Input"
+      puts "\n___Invalid Input___"
       self.display_country
     end
   end
