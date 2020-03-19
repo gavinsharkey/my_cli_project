@@ -92,7 +92,9 @@ class CLI
       puts "  Active Cases: #{country.active}"
       puts '--------------------------------'     
 
-      
+      puts "\nWould you like to view another country?(Y/N)"
+      repeat = gets.strip.downcase
+      self.display_country if repeat == 'y'
     else
       puts "Invalid Input"
       self.display_country
