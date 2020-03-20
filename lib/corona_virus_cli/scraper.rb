@@ -1,4 +1,4 @@
-class Scraper
+class CoronaVirusCLI::Scraper
 
   @@doc = Nokogiri::HTML(open('https://www.worldometers.info/coronavirus/'))
 
@@ -9,7 +9,7 @@ class Scraper
   def self.get_virus
     all = self.get_totals.merge(self.get_active, self.get_closed)
 
-    virus = Virus.create('World', all)
+    virus = CoronaVirusCLI::Virus.create('World', all)
   end
 
   def self.get_virus_per_country
@@ -22,7 +22,7 @@ class Scraper
       recovered = country.css('td')[5].text.strip
       active = country.css('td')[6].text.strip
 
-      Country.new(name, total, deaths, recovered, active)
+      CoronaVirusCLI::Country.new(name, total, deaths, recovered, active)
     end
   end
 

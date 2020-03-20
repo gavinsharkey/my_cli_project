@@ -3,7 +3,6 @@ PATH
   specs:
     corona_virus_cli (0.1.0)
       nokogiri
-      pry
 
 GEM
   remote: https://rubygems.org/

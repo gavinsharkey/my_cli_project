@@ -1,4 +1,4 @@
-class Virus
+class CoronaVirusCLI::Virus
   attr_accessor :name, :total, :total_deaths, :total_recovered, :active, :active_mild, :active_severe, :closed, :closed_deaths, :closed_recovered
 
   @@all = []
@@ -18,7 +18,7 @@ class Virus
   end
 
   def self.create(name, data)
-    virus = Virus.new(name)
+    virus = self.new(name)
 
     data.each do |key, value|
       virus.send("#{key}=", value)
@@ -37,6 +37,10 @@ class Virus
   #   @@countries << country
   #   country
   # end
+
+  def countries
+    CoronaVirusCLI::Country.all
+  end
 
   def self.find_by_name(name)
     self.all.detect {|obj| obj.name == name}

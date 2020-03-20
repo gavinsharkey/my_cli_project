@@ -1,4 +1,4 @@
-class Country
+class CoronaVirusCLI::Country
   attr_accessor :name, :total, :deaths, :recovered, :active
 
   @@all = []

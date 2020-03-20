@@ -1,9 +1,9 @@
-class CLI
+class CoronaVirusCLI::CLI
   attr_reader :virus
 
   def call
-    @virus = Scraper.get_virus
-    Scraper.get_virus_per_country
+    @virus = CoronaVirusCLI::Scraper.get_virus
+    CoronaVirusCLI::Scraper.get_virus_per_country
 
 
     puts "\n_____COVID-19 World Statistics_____\n"
@@ -85,7 +85,7 @@ class CLI
     input = gets.strip.to_i
 
     if input.between?(1, self.virus.countries.length)
-      country = Country.all[input - 1]
+      country = self.virus.countries[input - 1]
       puts ''
       puts '--------------------------------'     
       puts "#{country.name}:"
@@ -106,7 +106,7 @@ class CLI
 
   def list_countries
     puts ""
-    Country.all.each.with_index(1) do |country, i| 
+    self.virus.countries.each.with_index(1) do |country, i| 
       puts "#{i}. #{country.name}"
     end
   end 
