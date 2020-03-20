@@ -2,8 +2,7 @@
 
 Hello! This is a simple CLI gem for displaying up-to-date statistics about the Corona Virus (COVID-19).
 
-After you fork it, just run ```ruby bin/corona_virus_cli```.
-
+After you fork it, run ```bundle install```, then ```ruby bin/corona_virus_cli```.
 
 ## Installation
 
@@ -20,30 +19,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install corona_virus_cli
-
-## Usage
-
-Upon startup, you'll be presented with this UI:
-
-**_____COVID-19 World Statistics_____**
-
-**1. World Total Stats**
-**2. World Active Cases Stats**
-**3. World Closed Cases Stats**
-**4. Stats per Country**
-**5. Exit**
-
-**What would you like to do?**
-
-If you view 'stats per county', you'll be presented with a list like this:
-
-**1. China**
-**2. Italy**
-**3. Iran**
-**4. Spain**
-**5. Germany**
-**6. USA**
-**...**
 
 ## Contributing
 
