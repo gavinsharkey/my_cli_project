@@ -7,18 +7,12 @@ class CLI
 
 
     puts "\n_____COVID-19 World Statistics_____\n"
-    self.list_options
+    self.main_loop
     puts "\nThank you, and stay safe!"
   end
 
-  def list_options
-    puts ""
-    puts "1. World Total Stats"
-    puts "2. World Active Cases Stats"
-    puts "3. World Closed Cases Stats"
-    puts "4. Stats per Country"
-    puts "5. Exit"
-
+  def main_loop
+    self.list_options
     print "\nWhat would you like to do? "
     input = gets.strip.to_i
     if input.between?(1, 5)
@@ -29,12 +23,21 @@ class CLI
       end
     else
       puts "\n___Invalid Input___"
-      self.list_options
+      self.main_loop
     end
 
     print "\nWould you like to check something else?(Y/N) "
     input = gets.strip.downcase
-    input == 'y' ? self.list_options : nil
+    input == 'y' ? self.main_loop : nil
+  end
+
+  def list_options
+    puts ""
+    puts "1. World Total Stats"
+    puts "2. World Active Cases Stats"
+    puts "3. World Closed Cases Stats"
+    puts "4. Stats per Country"
+    puts "5. Exit"
   end
 
   def option(i)

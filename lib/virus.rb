@@ -2,6 +2,7 @@ class Virus
   attr_accessor :name, :total, :total_deaths, :total_recovered, :active, :active_mild, :active_severe, :closed, :closed_deaths, :closed_recovered
 
   @@all = []
+  # @@countries = []
 
   def self.all
     @@all
@@ -33,6 +34,18 @@ class Virus
 
     virus
   end
+  # Potential refactor, still deciding
+  # def self.create_country(name, total, deaths, recovered, active)
+  #   country = Virus.new(name)
+  #   country.total = total
+  #   country.total_deaths = deaths
+  #   country.total_recovered = recovered
+  #   country.active = active
+
+  #   @@countries << country
+  #   country
+  # end
+
   def countries
     Country.all
   end
