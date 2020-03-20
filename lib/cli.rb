@@ -8,7 +8,7 @@ class CLI
 
     puts "\n_____COVID-19 World Statistics_____\n"
     self.list_options
-    puts "Thank you!"
+    puts "\nThank you, and stay safe!"
   end
 
   def list_options
