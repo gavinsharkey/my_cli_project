@@ -106,7 +106,7 @@ class CLI
 
   def list_countries
     puts ""
-    self.virus.countries.each.with_index(1) do |country, i| 
+    Country.all.each.with_index(1) do |country, i| 
       puts "#{i}. #{country.name}"
     end
   end 
