@@ -7,11 +7,9 @@ class Scraper
   end
 
   def self.get_virus
-    totals = self.get_totals
-    active = self.get_active
-    closed = self.get_closed
+    all = self.get_totals.merge(self.get_active, self.get_closed)
 
-    virus = Virus.create('World', totals, active, closed)
+    virus = Virus.create('World', all)
   end
 
   def self.get_virus_per_country

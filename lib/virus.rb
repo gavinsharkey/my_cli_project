@@ -17,18 +17,10 @@ class Virus
     self.save
   end
 
-  def self.create(name, totals, actives, closed)
+  def self.create(name, data)
     virus = Virus.new(name)
-    
-    totals.each do |key, value|
-      virus.send("#{key}=", value)
-    end
 
-    actives.each do |key, value|
-      virus.send("#{key}=", value)
-    end
-
-    closed.each do |key, value|
+    data.each do |key, value|
       virus.send("#{key}=", value)
     end
 
@@ -46,7 +38,7 @@ class Virus
   #   country
   # end
 
-  def countries
+  def self.countries
     Country.all
   end
 
