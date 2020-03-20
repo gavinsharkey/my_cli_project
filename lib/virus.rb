@@ -38,16 +38,8 @@ class Virus
   #   country
   # end
 
-  def self.countries
-    Country.all
-  end
-
   def self.find_by_name(name)
     self.all.detect {|obj| obj.name == name}
-  end
-
-  def find_country_by_name(name)
-    self.countries.detect {|country| country.name == name}
   end
 
 end
