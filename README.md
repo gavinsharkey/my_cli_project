@@ -1,8 +1,7 @@
 # Corona Virus Cli
 
 Hello! This is a simple CLI gem for displaying up-to-date statistics about the Corona Virus (COVID-19).  
-You can choose it view world stats (total cases, active cases, closed cases), and you can  
-view stats per country.
+You can view world stats (total cases, active cases, closed cases), and you can view stats per country.
 
 ## Installation
 
