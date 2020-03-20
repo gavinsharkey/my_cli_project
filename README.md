@@ -23,13 +23,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Upon startup, you'll be presented with this UI:
 
-## Development
+**_____COVID-19 World Statistics_____**
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+**1. World Total Stats**
+**2. World Active Cases Stats**
+**3. World Closed Cases Stats**
+**4. Stats per Country**
+**5. Exit**
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+**What would you like to do?**
+
+If you view 'stats per county', you'll be presented with a list like this:
+
+**1. China**
+**2. Italy**
+**3. Iran**
+**4. Spain**
+**5. Germany**
+**6. USA**
+**...**
 
 ## Contributing
 
