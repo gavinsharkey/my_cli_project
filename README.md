@@ -7,7 +7,7 @@ You can view world stats (total cases, active cases, closed cases), and you can 
 
 After you fork it, run ```bundle install```, then ```ruby bin/corona_virus_cli```.
 
-Also, this CLI requires RubyGem 3.0.0 or higher. if you run into a bundler error on startup,  
+Also, this CLI requires RubyGem 3.0.0 or higher. If you run into a bundler error on startup,  
 type ```gem update --system``` in your console.
 
 ## Contributing
