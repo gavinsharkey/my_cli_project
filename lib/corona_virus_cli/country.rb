@@ -21,6 +21,13 @@ class CoronaVirusCLI::Country
     self.save
   end
 
+  def self.sort_by_deaths
+
+    self.all.sort_by do |country| 
+      country.deaths.gsub(',', '').to_i
+    end.reverse
+  end
+
   def self.find_by_name(name)
     self.all.detect {|obj| obj.name == name}
   end

@@ -2,9 +2,10 @@ class CoronaVirusCLI::CLI
   attr_reader :virus
 
   def call
+    puts "*****Loading data from the web...*****"
+
     @virus = CoronaVirusCLI::Scraper.get_virus
     CoronaVirusCLI::Scraper.get_virus_per_country
-
 
     puts "\n_____COVID-19 World Statistics_____\n"
     self.main_loop
@@ -28,7 +29,7 @@ class CoronaVirusCLI::CLI
 
     print "\nWould you like to check something else?(Y/N) "
     input = gets.strip.downcase
-    input == 'y' ? self.main_loop : nil
+    self.main_loop if input == 'y'
   end
 
   def list_options
