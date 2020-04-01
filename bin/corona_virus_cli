@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "corona_virus"
+require "coronavirus"
 
 CoronaVirusCLI::CLI.new.call
 

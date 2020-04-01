@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "corona_virus_cli/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "corona_virus_cli"
+  spec.name          = "coronavirus"
   spec.version       = CoronaVirusCLI::VERSION
   spec.authors       = ["gavinsharkey"]
   spec.email         = ["gavinsharkey2016@gmail.com"]
