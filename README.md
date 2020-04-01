@@ -5,7 +5,7 @@ You can view world stats (total cases, active cases, closed cases), and you can 
 
 ## Installation
 
-After you fork it, run ```bundle install```, then ```ruby bin/corona_virus_cli```.
+You can download this gem with ```gem install corona_virus_cli```.
 
 ## Contributing
 
